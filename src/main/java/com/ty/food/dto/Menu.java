@@ -4,27 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
-public class Item {
+public class Menu {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id ;
 	private String name ;
-	private int quantity ;
+	private String description ;
 	private double cost ;
-	private double total ;
-	public double getTotal() {
-		return total;
-	}
-	public void setTotal(double total) {
-		this.total = total;
-	}
-	@ManyToOne
-	@JoinColumn
-	private FoodOrder foodOrder ;
+	private String Type ;
+	private String offer ;
+	private String image ;
 	public int getId() {
 		return id;
 	}
@@ -37,11 +28,11 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getQuantity() {
-		return quantity;
+	public String getDescription() {
+		return description;
 	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public double getCost() {
 		return cost;
@@ -49,11 +40,23 @@ public class Item {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-	public FoodOrder getFoodOrder() {
-		return foodOrder;
+	public String getType() {
+		return Type;
 	}
-	public void setFoodOrder(FoodOrder foodOrder) {
-		this.foodOrder = foodOrder;
+	public void setType(String type) {
+		Type = type;
+	}
+	public String getOffer() {
+		return offer;
+	}
+	public void setOffer(String offer) {
+		this.offer = offer;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
 	

@@ -1,17 +1,18 @@
-package com.ty.food.service;
+package com.ty.food.controller;
 
 import java.util.List;
 
 import com.ty.food.dto.FoodOrder;
 import com.ty.food.dto.Item;
+import com.ty.food.service.FoodOrderService;
 
-public class TestGetFoodOrderById {
+public class TestGetFoodOrderByPhone {
 
 	public static void main(String[] args) {
 		
 		FoodOrderService service = new FoodOrderService() ;
 		
-		FoodOrder foodOrder = service.getFoodOrderById(2) ;
+		FoodOrder foodOrder = service.getFoodOrderByPhone(97178798) ;
 		
 		if( foodOrder != null ) {
 			List<Item> items = foodOrder.getItems() ;

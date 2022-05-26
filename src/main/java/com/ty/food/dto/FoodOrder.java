@@ -15,6 +15,13 @@ public class FoodOrder {
 	private int id ;
 	private String name ;
 	private long phone ;
+	private double total ;
+	public double getTotal() {
+		return total;
+	}
+	public void setTotal(double total) {
+		this.total = total;
+	}
 	@OneToMany (mappedBy = "foodOrder")
 	List<Item> items ;
 	public int getId() {
@@ -41,4 +48,5 @@ public class FoodOrder {
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
+	
 }
