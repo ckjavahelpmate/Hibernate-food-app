@@ -8,7 +8,7 @@ public class TestSaveTax {
 	public static void main(String[] args) {
 		
 		Tax tax = new Tax() ;
-		tax.setGstName("SGST");
+		tax.setGstName("CGST");
 		tax.setGstValue(.18);
 		
 		TaxService service = new TaxService() ;

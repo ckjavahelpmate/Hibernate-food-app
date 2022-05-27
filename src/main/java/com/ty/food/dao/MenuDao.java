@@ -32,7 +32,7 @@ public class MenuDao {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("vikas") ;
 		EntityManager entityManager = entityManagerFactory.createEntityManager() ;
 		
-		Query query = entityManager.createQuery("Select m from Menu m where m.type=?1") ;
+		Query query = entityManager.createQuery("Select m from Menu m where m.name=?1") ;
 		query.setParameter(1, type) ;
 		
 		return query.getResultList() ;

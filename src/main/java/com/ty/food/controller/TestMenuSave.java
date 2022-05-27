@@ -8,7 +8,7 @@ public class TestMenuSave {
 	public static void main(String[] args) {
 
 		Menu menu = new Menu() ;
-		menu.setName("Benne-Masala dosa");
+		menu.setName("benne masala dosa");
 		menu.setDescription("Single");
 		menu.setCost(80);
 		menu.setType("Veg");

@@ -2,6 +2,7 @@ package com.ty.food.dto;
 
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
+@Cacheable
 public class FoodOrder {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +18,13 @@ public class FoodOrder {
 	private String name ;
 	private long phone ;
 	private double total ;
+	private double tax ;
+	public double getTax() {
+		return tax;
+	}
+	public void setTax(double tax) {
+		this.tax = tax;
+	}
 	public double getTotal() {
 		return total;
 	}
